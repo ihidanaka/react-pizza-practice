@@ -1,0 +1,29 @@
+{
+  "name": "pizza-practice-v2",
+  "version": "1.0.0",
+  "description": "pizza-practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihidanaka/react-pizza-practice.git"
+  },
+  "keywords": [
+    "react",
+    "pizza",
+    "webapp"
+  ],
+  "author": "Max Kiselyov @ihidanaka kisselow@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihidanaka/react-pizza-practice/issues"
+  },
+  "homepage": "https://github.com/ihidanaka/react-pizza-practice#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4"
+  }
+}
