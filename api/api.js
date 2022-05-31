@@ -9,8 +9,8 @@ router.get('/users', (req, res) => {
         .then(user => res.send(user))
 });
 
-router.get('/items', (req, res) => {
-    Item.find({})
+router.get('/items?category=:categoryId', (req, res) => {
+    Item.find({category: req.params.categoryId})
         .then(item => res.send(item))
 });
 
