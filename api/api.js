@@ -6,9 +6,7 @@ const Settings = require('../models/Settings')
 
 router.get('/settings/categories', async (req, res) => {
 
-    await Settings.find({
-            categories
-        })
+    await Settings.findOne({ })
         .then(category => res.send(category))
 });
 
