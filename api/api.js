@@ -4,7 +4,7 @@ const User = require("../models/User");
 const Item = require("../models/Item");
 const Settings = require("../models/Settings");
 
-router.get("/settings/categories", async (req, res) => {
+router.get("/settings", async (req, res) => {
   await Settings.findOne({}).then((category) => res.send(category));
 });
 
