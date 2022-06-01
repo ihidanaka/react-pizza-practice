@@ -7,9 +7,9 @@ const ItemSchema = new Schema({
     types: [Number],
     sizes: [Number],
     price: Number,
-    category: Number,
+    category: Number || String,
     rating: Number
 })
 
-const Item = mongoose.model('item', ItemSchema);
+const Item = mongoose.model('Item', ItemSchema);
 module.exports = Item;

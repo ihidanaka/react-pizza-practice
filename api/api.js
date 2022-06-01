@@ -10,7 +10,8 @@ router.get('/users', (req, res) => {
 });
 
 router.get('/items?category=:categoryId', (req, res) => {
-    Item.find({category: req.params.categoryId})
+    console.log(req.params.categoryId)
+    Item.find({category: Number(req.params.categoryId)})
         .then(item => res.send(item))
 });
 
