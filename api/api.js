@@ -6,7 +6,7 @@ const Settings = require('../models/Settings')
 
 router.get('/settings/categories', async (req, res) => {
 
-    await Settings.findOne({ })
+    await Settings.findOne({})
         .then(category => res.send(category))
 });
 
@@ -19,10 +19,11 @@ router.get('/users', async (req, res) => {
 router.get('/items&category=:categoryId&sort=:sort', async (req, res) => {
 
     if (req.params.categoryId == 0) await Item.find({})
+        .sort(req.params.sort)
         .orFail(
             () => new Error(`Category with id: ${req.params.categoryId} not found`)
         )
-        .sort(req.params.sort)
+
         .then(item => res.send(item))
         .catch((err) => res.status(404)
             .send({
@@ -31,11 +32,11 @@ router.get('/items&category=:categoryId&sort=:sort', async (req, res) => {
     else
         await Item.find({
             category: Number(req.params.categoryId)
-        })
+        }).sort(req.params.sort)
         .orFail(
             () => new Error(`Category with id: ${req.params.categoryId} not found`)
         )
-        .sort(req.params.sort)
+
         .then(item => res.send(item)).catch((err) => res.status(404).send({
             error: err.message
         }))
