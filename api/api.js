@@ -19,9 +19,10 @@ router.get("/items&category=:categoryId&sort=:sortType", async (req, res) => {
         () => new Error(`Category with id: ${req.params.categoryId} not found`)
       )
 
-      .then((item) => item ? res.send([]) : res.send(item))
+      .then((item) => res.send(item))
       .catch((err) =>
         res.status(404).send({
+
           error: err.message,
         })
       );
@@ -37,6 +38,7 @@ router.get("/items&category=:categoryId&sort=:sortType", async (req, res) => {
       .then((item) => res.send(item))
       .catch((err) =>
         res.status(404).send({
+          
           error: err.message,
         })
       );
