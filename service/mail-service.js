@@ -5,7 +5,7 @@ class MailService {
         this.transporter = nodemailer.createTransport({
             host: 'smtp.yandex.ru',
             port: 465,
-            secure:false, 
+            secure:true, 
             auth:{
                 user:"reactpizza.store@yandex.ru",
                 pass:"emwxsmaqbfezrlds"
