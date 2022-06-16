@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use('/api', router);
 const start = async () => {
     try {
-        await mongoose.connect("mongodb://ihidanaka:ihidanaka@5.187.0.127:27017/pizza-db", {
+        await mongoose.connect("mongodb://ihidanaka:ihidanaka@127.0.0.1:27017/pizza-db", {
             useNewUrlParser: true,
         })
         .then(val => {
