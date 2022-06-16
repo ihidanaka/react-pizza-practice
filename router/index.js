@@ -1,5 +1,4 @@
 const Router = require ('express').Router;
-const User = require("../models/user-model");
 const userController = require('../controllers/user-controller')
 const Item = require("../models/item-model");
 const Settings = require("../models/settings-model");

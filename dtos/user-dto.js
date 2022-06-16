@@ -6,7 +6,7 @@ module.exports = class UserDto {
     orders;
 
     constructor(model) {
-        this.email = model.email;
+        this.email = model.email; 
         this.id = model._id;
         this.isActivated = model.isActivated;
         this.cart = model.cart;
