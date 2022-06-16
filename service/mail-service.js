@@ -3,18 +3,18 @@ class MailService {
 
     constructor (){
         this.transporter = nodemailer.createTransport({
-            host: 'smtp.gmail.com',
-            port:587,
+            host: 'smtp.yandex.ru',
+            port: 465,
             secure:false, 
             auth:{
-                user:"reactkisselow@gmail.com",
-                pass:`$d/RGr3wz\k!YF=N`
+                user:"reactpizza.store@yandex.ru",
+                pass:"emwxsmaqbfezrlds"
             }
         })
     }
     async sendActivationMail(to, link) {
         await this.transporter.sendMail({
-            from:"reactkisselow@gmail.com",
+            from:"reactpizza.store@yandex.ru",
             to,
             subject:'Account activation on react-pizza.store',
             text:'',
